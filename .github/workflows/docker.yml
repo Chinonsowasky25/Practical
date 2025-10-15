@@ -37,6 +37,3 @@ jobs:
 
       - name: Push Docker image
         run: docker push waskylala/flask-cicd:latest .
-
-      _USERNAME }}/waskylala/demo-app:latest
-          tags: ${{ secrets.DOCKER_USERNAME }}/demo-app:latest

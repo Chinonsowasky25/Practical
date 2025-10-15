@@ -36,4 +36,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image
-        run: docker push waskylala/flask-cicd:latest .
+        run: docker push waskylala/flask-cicd:latest

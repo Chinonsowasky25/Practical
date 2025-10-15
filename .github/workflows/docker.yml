@@ -27,7 +27,7 @@ jobs:
           echo "Flask installed and working!"
 
       - name: Build Docker image
-        run: docker build -t myimage1/flask-cicd:latest .
+        run: docker build -t waskylala/flask-cicd:latest .
 
       - name: Log in to Docker Hub
         - name: Login to DockerHub
@@ -36,11 +36,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          registry: docker.io
-         # tags: ${{ secrets.DOCKER_USERNAME }}/waskylala/demo-app:latest
+      - name: Push Docker image
+        run: docker push waskylala/flask-cicd:latest
+
+      _USERNAME }}/waskylala/demo-app:latest
           tags: ${{ secrets.DOCKER_USERNAME }}/demo-app:latest
